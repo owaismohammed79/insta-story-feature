@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronLeftCircle, ChevronRightCircle } from "lucide-react";
 import data from "../data/reelData.json";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,6 +10,15 @@ const Reel = ({ userIndex, setUserIndex, totalUsers }) => {
   const reelLength = user.reels.length
   console.log("reel Index", index)
   console.log("User iNDEX", userIndex)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if(index < reelLength - 1) setIndex((ind) => ind + 1);
+      else handleRightClick()
+    }, 5000)
+
+    return () => clearTimeout(timer)
+  }, [index, userIndex])
 
   function handleRightClick(e){
     e?.stopPropagation()
