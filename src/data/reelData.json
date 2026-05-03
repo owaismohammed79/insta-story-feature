@@ -1,0 +1,35 @@
+{
+  "data": [
+    {
+      "username": "abc",
+      "reels": [
+        {
+          "imageUrl": "https://images.newscientist.com/wp-content/uploads/2025/10/22104102/sei270442616.jpg?width=1100",
+          "timePosted": "2024-04-07T14:27:53"
+        },
+        {
+          "imageUrl": "https://images.newscientist.com/wp-content/uploads/2025/10/22104307/sei270442252.jpg?width=1100",
+          "timePosted": "2024-04-07T14:27:53"
+        }
+      ]
+    },
+    {
+      "username": "def",
+      "reels": [
+        {
+          "imageUrl": "https://images.newscientist.com/wp-content/uploads/2025/10/22104440/sei270442328.jpg?width=1100",
+          "timePosted": "2024-04-07T14:27:53"
+        }
+      ]
+    },
+    {
+      "username": "def2",
+      "reels": [
+        {
+          "imageUrl": "https://img.freepik.com/free-photo/portrait-beautiful-purebred-pussycat-with-shorthair-orange-collar-neck-sitting-floor-reacting-camera-flash-scared-looking-light-indoor_8353-12551.jpg?semt=ais_hybrid&w=740&q=80",
+          "timePosted": "2024-04-07T14:27:53"
+        }
+      ]
+    }
+  ]
+}
