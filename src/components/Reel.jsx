@@ -33,7 +33,7 @@ const Reel = ({ userIndex, setUserIndex, totalUsers }) => {
   }
 
   return (
-    <div className="h-full w-full shrink-0 snap-center relative flex overflow-x-scroll snap-x snap-mandatory" style={{ perspective: '1000px' }}>
+    <div className="h-full w-full shrink-0 snap-center flex snap-x snap-mandatory perspective-[1000px]" >
         <AnimatePresence mode="wait">
         <motion.div
           key={userIndex}
@@ -44,9 +44,25 @@ const Reel = ({ userIndex, setUserIndex, totalUsers }) => {
           className="h-full w-full relative"
           onClick={handleClick}
         >
-          <h3 className="absolute z-10 text-2xl px-4 py-4 font-bold text-white bg-gray-400 w-full">
-            {user.username}
-          </h3>
+          <div className="absolute top-0 left-0 w-full z-20 pt-8 pb-12 px-4 bg-gradient-to-b from-black/70 via-black/30 to-transparent pointer-events-none">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-full border-2 border-white/50 overflow-hidden bg-gray-600 shrink-0">
+                <img 
+                  src={`https://static.vecteezy.com/system/resources/previews/021/548/095/original/default-profile-picture-avatar-user-avatar-icon-person-icon-head-icon-profile-picture-icons-default-anonymous-user-male-and-female-businessman-photo-placeholder-social-network-avatar-portrait-free-vector.jpg`} 
+                  alt="avatar" 
+                />
+              </div>
+              
+              <div className="flex flex-col">
+                <span className="text-white font-semibold text-sm tracking-wide drop-shadow-md">
+                  {user.username}
+                </span>
+                <span className="text-white/70 text-xs font-medium">
+                  Original Audio
+                </span>
+              </div>
+            </div>
+          </div>
           <button onClick={handleLeftClick}>
             <ChevronLeftCircle className="absolute left-1 top-1/2 z-10 rounded-full bg-white" />
           </button>
